@@ -1,0 +1,43 @@
+{
+  "name": "vuic",
+  "version": "0.0.1",
+  "author": {
+    "name": "Eugene Volynko",
+    "email": "volynko.ua@gmail.com",
+    "url": "https://github.com/Beelink"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vuic.umd.js",
+  "module": "./dist/vuic.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vuic.es.js",
+      "require": "./dist/vuic.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "docs:dev": "histoire dev",
+    "docs:build": "histoire build",
+    "docs:preview": "histoire preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.37"
+  },
+  "dependencies": {
+    "pinia": "^2.0.22"
+  },
+  "devDependencies": {
+    "@histoire/plugin-vue": "^0.10.7",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "histoire": "^0.10.7",
+    "sass": "^1.55.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vue-tsc": "^0.40.4"
+  }
+}
