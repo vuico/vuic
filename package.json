@@ -11,9 +11,6 @@
     "type": "git",
     "url": "https://github.com/vuico/vuic"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/vuico"
-  },
   "files": [
     "dist"
   ],
