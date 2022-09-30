@@ -2,7 +2,7 @@
 export interface Props {
   variant?: "outlined" | "filled";
   color?: "black" | "orange" | "purple";
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const props = withDefaults(defineProps<Props>(), {
