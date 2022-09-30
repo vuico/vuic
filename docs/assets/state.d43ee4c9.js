@@ -1,4 +1,4 @@
-import { d as clientSupportPlugins } from "./GenericMountStory.48c20e9e.js";
+import { d as clientSupportPlugins } from "./GenericMountStory.034efd32.js";
 import { d as defineComponent, k as ref, $ as watchEffect, o as openBlock, c as createBlock, m as mergeProps, a0 as resolveDynamicComponent, q as createCommentVNode, _ as markRaw, H as isRef, h as unref } from "./vendor.4da1c531.js";
 const __default__ = {
   inheritAttrs: false
