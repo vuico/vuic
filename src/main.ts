@@ -1,9 +1,15 @@
+// utils
 import { createApp } from "vue";
-import { createPinia } from "pinia";
 import App from "./App.vue";
 
-const app = createApp(App);
-const Pinia = createPinia();
+// plugins
+import { createPinia } from "pinia";
+import { VuicPlugin } from ".";
 
-app.use(Pinia);
+const app = createApp(App);
+
+const PiniaPlugin = createPinia();
+
+app.use(PiniaPlugin);
+app.use(VuicPlugin);
 app.mount("#app");
