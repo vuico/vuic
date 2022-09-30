@@ -13,8 +13,12 @@ export default defineConfig({
   tree: {
     groups: [
       {
-        id: "atoms",
-        title: "Atoms",
+        id: "introduction",
+        title: "Introduction",
+      },
+      {
+        id: "components",
+        title: "Components",
       },
     ],
   },

@@ -1,11 +1,23 @@
 <script lang="ts" setup>
-import { InputProps } from "./Input.props";
-
-defineProps({
-  ...InputProps,
-});
-
 const emit = defineEmits(["change"]);
+</script>
+
+<script lang="ts">
+export default {
+  name: "Input",
+  props: {
+    placeholder: {
+      type: String,
+      required: false,
+      default: "",
+    },
+    value: {
+      type: String,
+      required: false,
+      default: "",
+    },
+  },
+};
 </script>
 
 <template>
@@ -17,12 +29,6 @@ const emit = defineEmits(["change"]);
     @change="emit('change')"
   />
 </template>
-
-<script lang="ts">
-export default {
-  name: "Input",
-};
-</script>
 
 <style lang="scss" scoped>
 @import "./Input.scss";

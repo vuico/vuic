@@ -1,20 +1,27 @@
-import { aq as defineComponent, ar as openBlock, as as createElementBlock, av as resolveComponent, aw as createBlock, ax as withCtx, ay as createVNode } from "./vendor.4da1c531.js";
+import { av as defineComponent, aw as openBlock, ax as createElementBlock, aA as resolveComponent, aB as createBlock, aC as withCtx, aE as createVNode } from "./vendor.b38c95bb.js";
 import { _ as _export_sfc } from "./_plugin-vue_export-helper.cdc0426e.js";
 const Input_vue_vue_type_style_index_0_scoped_d890ad85_lang = "";
 const __default__ = {
-  name: "Input"
-};
-const _sfc_main$1 = defineComponent({
-  ...__default__,
+  name: "Input",
   props: {
-    placeholder: { type: String, required: false, default: "" },
-    value: { type: String, required: false, default: "" },
-    onChange: { type: Function, required: false }
-  },
-  setup(__props, { expose }) {
+    placeholder: {
+      type: String,
+      required: false,
+      default: ""
+    },
+    value: {
+      type: String,
+      required: false,
+      default: ""
+    }
+  }
+};
+const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+  ...__default__,
+  emits: ["change"],
+  setup(__props, { expose, emit }) {
     expose();
-    const props = __props;
-    const __returned__ = { props };
+    const __returned__ = { emit };
     Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
     return __returned__;
   }
@@ -25,8 +32,8 @@ function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
     type: "text",
     class: "input",
     value: $props.value,
-    onChange: _cache[0] || (_cache[0] = (...args) => $setup.props.onChange && $setup.props.onChange(...args)),
-    placeholder: $props.placeholder
+    placeholder: $props.placeholder,
+    onChange: _cache[0] || (_cache[0] = ($event) => $setup.emit("change"))
   }, null, 40, _hoisted_1);
 }
 _sfc_main$1.__file = "src/components/Input/Input.vue";

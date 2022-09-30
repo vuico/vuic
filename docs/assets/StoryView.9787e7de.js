@@ -1,8 +1,10 @@
-import { j as useRoute, i as computed, d as defineComponent, u as useCssVars, h as unref, a4 as toRefs, k as ref, o as openBlock, l as createElementBlock, p as createVNode, w as withCtx, I as Icon, n as normalizeClass, a as createBaseVNode, t as toDisplayString, a5 as useRouter, a6 as useResizeObserver, r as resolveComponent, c as createBlock, D as withModifiers, f as watch, E as normalizeStyle, F as Fragment, B as renderList, z as defineStore, A as useStorage, b as renderSlot, e as withKeys, J as resolveDirective, K as withDirectives, a7 as vModelText, M as createTextVNode, q as createCommentVNode, N as pushScopeId, O as popScopeId, C as onUnmounted, a8 as createStaticVNode, G as useEventListener, R as reactive, a3 as applyState, a9 as toRaw, m as mergeProps, aa as Dropdown, ab as clone, ac as omit, g as onMounted, ad as useTimeoutFn, ae as onClickOutside, H as isRef, af as nextTick, ag as HstTextarea, ah as HstCheckbox, ai as HstNumber, aj as HstText, a0 as resolveDynamicComponent, $ as watchEffect, _ as markRaw, ak as shallowRef, al as getHighlighter, am as unindent, an as HstCopyIcon, ao as setCDN, T as Transition, a2 as h, ap as onBeforeUnmount } from "./vendor.4da1c531.js";
-import { _ as _export_sfc, u as useScrollOnActive, B as BaseListItemLink, a as useStoryStore, b as base, i as isMobile, c as BaseSplitPane, d as _sfc_main$w } from "./bundle-main.d705c958.js";
-import { B as BaseEmpty } from "./BaseEmpty.0a816b09.js";
-import { _ as _sfc_main$v, a as SANDBOX_READY, E as EVENT_SEND, S as STATE_SYNC, t as toRawDeep, P as PREVIEW_SETTINGS_SYNC } from "./state.d43ee4c9.js";
-import { h as histoireConfig, d as clientSupportPlugins, i as isDark } from "./GenericMountStory.034efd32.js";
+import { b as useRoute, c as computed, d as defineComponent, u as useCssVars, a as unref, a8 as toRefs, r as ref, o as openBlock, e as createElementBlock, f as createVNode, w as withCtx, I as Icon, n as normalizeClass, g as createBaseVNode, t as toDisplayString, a9 as useRouter, aa as useResizeObserver, l as resolveComponent, q as createBlock, a0 as withModifiers, k as watch, G as normalizeStyle, F as Fragment, p as renderList, i as defineStore, j as useStorage, Y as renderSlot, m as withKeys, x as resolveDirective, y as withDirectives, ab as vModelText, z as createTextVNode, h as createCommentVNode, A as pushScopeId, B as popScopeId, $ as onUnmounted, ac as createStaticVNode, s as useEventListener, a6 as SANDBOX_READY, ad as EVENT_SEND, a3 as STATE_SYNC, a7 as applyState, a4 as PREVIEW_SETTINGS_SYNC, ae as toRaw, W as mergeProps, af as Dropdown, ag as clone, ah as omit, J as onMounted, ai as useTimeoutFn, aj as onClickOutside, v as isRef, ak as nextTick, al as HstTextarea, am as HstCheckbox, an as HstNumber, ao as HstText, X as resolveDynamicComponent, E as reactive, _ as __vitePreload, V as watchEffect, U as markRaw, ap as shallowRef, aq as getHighlighter, ar as unindent, as as HstCopyIcon, at as setCDN, T as Transition, a5 as h, au as onBeforeUnmount } from "./vendor.b38c95bb.js";
+import { u as useStoryStore, b as base } from "./story.a139f265.js";
+import { _ as _export_sfc, u as useScrollOnActive, B as BaseListItemLink, i as isMobile, b as BaseSplitPane, a as _sfc_main$w } from "./MobileOverlay.22f68c43.js";
+import { B as BaseEmpty } from "./BaseEmpty.bc20a35c.js";
+import { _ as _sfc_main$v, t as toRawDeep } from "./state.1c49f152.js";
+import { h as histoireConfig, b as clientSupportPlugins, i as isDark } from "./GenericMountStory.bd778a51.js";
+import { useEventsStore } from "./events.9c0777d3.js";
 function useCurrentVariantRoute(variant) {
   const route = useRoute();
   const isActive = computed(() => route.query.variantId === variant.value.id);
@@ -851,31 +853,6 @@ const _sfc_main$j = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const useEventsStore = defineStore("events", () => {
-  const storyStore = useStoryStore();
-  const events = reactive([]);
-  const unseen = ref(0);
-  function addEvent(event) {
-    events.push(event);
-    unseen.value++;
-  }
-  function reset() {
-    events.length = 0;
-    unseen.value = 0;
-  }
-  watch(() => {
-    var _a;
-    return (_a = storyStore.currentVariant) == null ? void 0 : _a.id;
-  }, () => {
-    reset();
-  });
-  return {
-    addEvent,
-    reset,
-    events,
-    unseen
-  };
-});
 const _hoisted_1$h = ["src"];
 const _sfc_main$i = /* @__PURE__ */ defineComponent({
   __name: "StoryVariantSinglePreviewRemote",
@@ -1625,7 +1602,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const markdownFiles = reactive({});
+const markdownFiles = reactive({ "src/stories/getting-started.story.md": () => __vitePreload(() => import("./getting-started.story.afba4dd7.js"), true ? [] : void 0) });
 const _hoisted_1$9 = /* @__PURE__ */ createTextVNode(" No documentation available ");
 const _hoisted_2$9 = ["innerHTML"];
 function useStoryDoc(story) {

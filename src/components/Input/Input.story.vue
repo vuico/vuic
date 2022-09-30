@@ -3,7 +3,11 @@ import Input from "./Input.vue";
 </script>
 
 <template>
-  <Story title="Input" :layout="{ type: 'grid', width: '100%' }" group="atoms">
+  <Story
+    title="Input"
+    :layout="{ type: 'grid', width: '100%' }"
+    group="components"
+  >
     <Variant title="Default">
       <Input placeholder="Placeholder" />
     </Variant>

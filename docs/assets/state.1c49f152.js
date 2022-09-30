@@ -1,5 +1,5 @@
-import { d as clientSupportPlugins } from "./GenericMountStory.034efd32.js";
-import { d as defineComponent, k as ref, $ as watchEffect, o as openBlock, c as createBlock, m as mergeProps, a0 as resolveDynamicComponent, q as createCommentVNode, _ as markRaw, H as isRef, h as unref } from "./vendor.4da1c531.js";
+import { b as clientSupportPlugins } from "./GenericMountStory.bd778a51.js";
+import { d as defineComponent, r as ref, V as watchEffect, o as openBlock, q as createBlock, W as mergeProps, X as resolveDynamicComponent, h as createCommentVNode, U as markRaw, v as isRef, a as unref } from "./vendor.b38c95bb.js";
 const __default__ = {
   inheritAttrs: false
 };
@@ -28,10 +28,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const STATE_SYNC = "__histoire:state-sync";
-const SANDBOX_READY = "__histoire:sandbox-ready";
-const EVENT_SEND = "__histoire:event";
-const PREVIEW_SETTINGS_SYNC = "__histoire:preview-settings-sync";
 const isObject = (val) => val !== null && typeof val === "object";
 function toRawDeep(val, clean = false, seen = /* @__PURE__ */ new WeakMap()) {
   const unwrappedValue = isRef(val) ? unref(val) : val;
@@ -69,10 +65,6 @@ const toRawObject = (obj, target, clean = false, seen = /* @__PURE__ */ new Weak
   });
 };
 export {
-  EVENT_SEND as E,
-  PREVIEW_SETTINGS_SYNC as P,
-  STATE_SYNC as S,
   _sfc_main as _,
-  SANDBOX_READY as a,
   toRawDeep as t
 };
