@@ -1,23 +1,20 @@
 <script lang="ts" setup>
-export interface Props {
-  variant?: "outlined" | "filled";
-  color?: "black" | "orange" | "purple";
-  onClick?: () => void;
-}
+import { ButtonProps } from "./Button.props";
 
-const props = withDefaults(defineProps<Props>(), {
-  variant: "outlined",
-  color: "black",
+defineProps({
+  ...ButtonProps,
 });
+
+const emit = defineEmits(["click"]);
 </script>
 
 <template>
   <button
     :class="{
       button: true,
-      [`button--${props.variant}-${props.color}`]: true,
+      [`button--${variant}-${color}`]: true,
     }"
-    @click="props.onClick"
+    @click="emit('click')"
   >
     <slot />
   </button>

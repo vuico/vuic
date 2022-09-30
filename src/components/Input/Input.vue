@@ -1,23 +1,20 @@
 <script lang="ts" setup>
-export interface Props {
-  placeholder?: string;
-  value?: string;
-  onChange?: (value: Event) => void;
-}
+import { InputProps } from "./Input.props";
 
-const props = withDefaults(defineProps<Props>(), {
-  placeholder: "",
-  value: "",
+defineProps({
+  ...InputProps,
 });
+
+const emit = defineEmits(["change"]);
 </script>
 
 <template>
   <input
     type="text"
     class="input"
-    :value="props.value"
-    @change="props.onChange"
-    :placeholder="props.placeholder"
+    :value="value"
+    :placeholder="placeholder"
+    @change="emit('change')"
   />
 </template>
 
