@@ -30,10 +30,10 @@
     "docs:build": "histoire build",
     "docs:preview": "histoire preview"
   },
-  "peerDependencies": {
-    "vue": "^3.2.37"
+  "dependencies": {
+    "vue": "^3.2.37",
+    "pinia": "^2.0.22"
   },
-  "dependencies": {},
   "devDependencies": {
     "@histoire/plugin-vue": "^0.10.7",
     "@vitejs/plugin-vue": "^3.1.0",
