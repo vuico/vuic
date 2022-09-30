@@ -1,10 +1,18 @@
 {
   "name": "vuic",
   "version": "0.0.1",
+  "description": "Vuic - Vue UI Components library",
   "author": {
     "name": "Eugene Volynko",
     "email": "volynko.ua@gmail.com",
     "url": "https://github.com/Beelink"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vuico/vuic"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/vuico"
   },
   "files": [
     "dist"
@@ -28,9 +36,7 @@
   "peerDependencies": {
     "vue": "^3.2.37"
   },
-  "dependencies": {
-    "pinia": "^2.0.22"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@histoire/plugin-vue": "^0.10.7",
     "@vitejs/plugin-vue": "^3.1.0",
