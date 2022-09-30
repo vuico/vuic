@@ -4,6 +4,7 @@ import path from "path";
 
 // plugins
 import Vue from "@vitejs/plugin-vue";
+import Checker from "vite-plugin-checker";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -30,5 +31,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [Vue()],
+  plugins: [Vue(), Checker({ typescript: true })],
 });

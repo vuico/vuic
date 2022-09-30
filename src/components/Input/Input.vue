@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
     class="input"
     :value="props.value"
     @change="props.onChange"
-    :placeholder="placeholder"
+    :placeholder="props.placeholder"
   />
 </template>
 

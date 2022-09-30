@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
       button: true,
       [`button--${props.variant}-${props.color}`]: true,
     }"
-    @click="onClick"
+    @click="props.onClick"
   >
     <slot />
   </button>
