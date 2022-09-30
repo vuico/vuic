@@ -1,6 +1,13 @@
 // utils
 import { App, Plugin } from "vue";
 
+// components
+import Button from "@/components/Button/Button.vue";
+
+export const components = {
+  Button,
+};
+
 export interface Theme {
   colors: {
     bg: string;
