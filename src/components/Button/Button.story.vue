@@ -9,17 +9,14 @@ import { hstEvent } from "histoire/client";
     :layout="{ type: 'grid', width: '100%' }"
     group="components"
   >
-    <Variant title="Outlined, Black">
-      <Button @click="hstEvent('Click', $event)">Button</Button>
+    <Variant title="Default">
+      <Button>Button</Button>
     </Variant>
-    <Variant title="Oulined, Orange">
-      <Button color="orange">Button</Button>
+    <Variant title="Primary">
+      <Button variant="primary">Button</Button>
     </Variant>
-    <Variant title="Filled, Orange">
-      <Button variant="filled" color="orange">Button</Button>
-    </Variant>
-    <Variant title="Filled, Purple">
-      <Button variant="filled" color="purple">Button</Button>
+    <Variant title="Primary, Large">
+      <Button variant="primary" size="large">Button</Button>
     </Variant>
   </Story>
 </template>

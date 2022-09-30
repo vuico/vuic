@@ -17,8 +17,16 @@ export default defineConfig({
         title: "Introduction",
       },
       {
+        id: "configuration",
+        title: "Configuration",
+      },
+      {
         id: "components",
         title: "Components",
+      },
+      {
+        id: "more",
+        title: "More",
       },
     ],
   },

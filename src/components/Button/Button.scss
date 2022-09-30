@@ -1,38 +1,68 @@
+// color
+$color_bg: #1c1c1c;
+$color_card: #2b2b2b;
+$color_border: #444444;
+$color_primary: #0484ff;
+$color_primary_inverted: #ffffff;
+$color_text: #ffffff;
+$color_text_inverted: #1c1c1c;
+$color_text_secondary: #9a9a9a;
+
+// font size
+$fontSize_default: 14px;
+$fontSize_lg: 18px;
+
+// duration
+$duration_fast: 0.25s;
+
+// font weight
+$fontWeight_default: 500;
+$fontWeight_bold: bold;
+
+// outline
+$outline_focus: 2px solid $color_primary_inverted;
+$outline_offset: -2px;
+
 .button {
-  border-radius: 18px;
-  border: none;
-  background: none;
-  padding: 0 20px;
-  height: 30px;
+  display: flex;
+  width: 100%;
+  height: 32px;
+  border-radius: 16px;
+  transition: background-color $duration_fast, color $duration_fast;
+  background: $color_card;
+  color: $color_text;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 0 24px;
+  outline-offset: $outline_offset;
 
-  &--outlined-black {
-    border: 1px solid #2a2b32;
-    color: #2a2b32;
+  &:focus-visible {
+    outline: $outline_focus;
   }
 
-  &--outlined-orange {
-    border: 1px solid #ff4a00;
-    color: #ff4a00;
+  &:hover {
+    background-color: $color_border;
   }
 
-  &--outlined-purple {
-    border: 1px solid #3f46ad;
-    color: #3f46ad;
+  &--primary {
+    background-color: $color_primary;
+
+    &:hover {
+      background-color: $color_primary_inverted;
+      color: $color_text_inverted;
+    }
   }
 
-  &--filled-black {
-    background-color: #2a2b32;
-    color: #ffffff;
+  &--large {
+    height: 48px;
+    border-radius: 24px;
+    font-size: $fontSize_lg;
+    padding: 0 32px;
   }
 
-  &--filled-orange {
-    background-color: #ff4a00;
-    color: #ffffff;
-  }
-
-  &--filled-purple {
-    background-color: #3f46ad;
-    color: #ffffff;
+  &--nobg {
+    background: none;
   }
 }

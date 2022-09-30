@@ -9,12 +9,12 @@ export default {
     variant: {
       type: String,
       required: false,
-      default: "outlined",
+      default: "default",
     },
-    color: {
+    size: {
       type: String,
       required: false,
-      default: "black",
+      default: "default",
     },
   },
 };
@@ -24,7 +24,9 @@ export default {
   <button
     :class="{
       button: true,
-      [`button--${variant}-${color}`]: true,
+      'button--primary': variant === 'primary',
+      'button--large': size === 'large',
+      'button--nobg': variant === 'nobg',
     }"
     @click="emit('click')"
   >
