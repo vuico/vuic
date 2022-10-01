@@ -1,37 +1,17 @@
-// color
-$color_bg: var(--theme-color-bg);
-$color_card: var(--theme-color-card);
-$color_border: var(--theme-color-border);
-$color_primary: var(--theme-color-primary);
-$color_primary_inverted: #ffffff;
-$color_text: var(--theme-color-text);
-$color_text_inverted: #1c1c1c;
-$color_text_secondary: #9a9a9a;
-
-// font size
-$fontSize_default: 14px;
-$fontSize_lg: 18px;
-
-// duration
-$duration_fast: 0.25s;
-
-// font weight
-$fontWeight_default: 500;
-$fontWeight_bold: bold;
-
 // outline
-$outline_focus: 2px solid $color_primary_inverted;
+$outline_focus: 2px solid var(--theme-color-primaryHovered);
 $outline_offset: -2px;
 
-.button {
+.vuic-button {
   border: none;
   display: flex;
   width: 100%;
   height: 32px;
   border-radius: 16px;
-  transition: background-color $duration_fast, color $duration_fast;
-  background: $color_card;
-  color: $color_text;
+  transition: background-color var(--theme-duration-fast),
+    color var(--theme-duration-fast);
+  background: var(--theme-color-card);
+  color: var(--theme-color-text);
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -44,23 +24,24 @@ $outline_offset: -2px;
   }
 
   &:hover {
-    background-color: $color_border;
+    background-color: var(--theme-color-border);
   }
 
   &--primary {
-    background-color: $color_primary;
+    background-color: var(--theme-color-primary);
     color: #ffffff;
 
     &:hover {
-      background-color: $color_primary_inverted;
-      color: $color_text_inverted;
+      background-color: var(--theme-color-primaryHovered);
+      color: var(--theme-color-textHovered);
     }
   }
 
   &--large {
     height: 48px;
     border-radius: 24px;
-    font-size: $fontSize_lg;
+    font-size: var(--theme-fontSize-large);
+    font-weight: var(--theme-fontWeight-bold);
     padding: 0 32px;
   }
 

@@ -1,10 +1,10 @@
 // utils
 import { reactive, readonly } from "vue";
-import { Config, defaultConfig } from "@/types/config";
-import { Settings, defaultSettings } from "@/types/settings";
+import { IConfig, defaultConfig } from "@/types/config";
+import { ISettings, defaultSettings } from "@/types/settings";
 
 export const createStore = () => {
-  const state = reactive<{ config: Config; settings: Settings }>({
+  const state = reactive<{ config: IConfig; settings: ISettings }>({
     config: defaultConfig,
     settings: defaultSettings,
   });
@@ -12,13 +12,15 @@ export const createStore = () => {
   const setTheme = (theme: "light" | "dark") => {
     state.settings.theme = theme;
 
-    if (state.config.theme && state.config.theme.color) {
-      Object.entries(state.config.theme.color).map(([key, value]) => {
-        document.documentElement.style.setProperty(
-          `--theme-color-${key}`,
-          value[theme],
-        );
-      });
+    if (state.config.theme) {
+      if (state.config.theme.color) {
+        Object.entries(state.config.theme.color).map(([key, value]) => {
+          document.documentElement.style.setProperty(
+            `--theme-color-${key}`,
+            value[theme],
+          );
+        });
+      }
     }
   };
 

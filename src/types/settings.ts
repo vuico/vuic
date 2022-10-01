@@ -1,7 +1,7 @@
-export interface Settings {
+export interface ISettings {
   theme?: "light" | "dark";
 }
 
-export const defaultSettings: Settings = {
+export const defaultSettings: ISettings = {
   theme: "light",
 };

@@ -2808,13 +2808,13 @@ body {
 }.htw-sandbox-hidden {
   display: none;
 }
-.button[data-v-ceff2a60] {
+.vuic-button[data-v-ceff2a60] {
   border: none;
   display: flex;
   width: 100%;
   height: 32px;
   border-radius: 16px;
-  transition: background-color 0.25s, color 0.25s;
+  transition: background-color var(--theme-duration-fast), color var(--theme-duration-fast);
   background: var(--theme-color-card);
   color: var(--theme-color-text);
   cursor: pointer;
@@ -2824,26 +2824,27 @@ body {
   padding: 0 24px;
   outline-offset: -2px;
 }
-.button[data-v-ceff2a60]:focus-visible {
-  outline: 2px solid #ffffff;
+.vuic-button[data-v-ceff2a60]:focus-visible {
+  outline: 2px solid var(--theme-color-primaryHovered);
 }
-.button[data-v-ceff2a60]:hover {
+.vuic-button[data-v-ceff2a60]:hover {
   background-color: var(--theme-color-border);
 }
-.button--primary[data-v-ceff2a60] {
+.vuic-button--primary[data-v-ceff2a60] {
   background-color: var(--theme-color-primary);
   color: #ffffff;
 }
-.button--primary[data-v-ceff2a60]:hover {
-  background-color: #ffffff;
-  color: #1c1c1c;
+.vuic-button--primary[data-v-ceff2a60]:hover {
+  background-color: var(--theme-color-primaryHovered);
+  color: var(--theme-color-textHovered);
 }
-.button--large[data-v-ceff2a60] {
+.vuic-button--large[data-v-ceff2a60] {
   height: 48px;
   border-radius: 24px;
-  font-size: 18px;
+  font-size: var(--theme-fontSize-large);
+  font-weight: var(--theme-fontWeight-bold);
   padding: 0 32px;
 }
-.button--nobg[data-v-ceff2a60] {
+.vuic-button--nobg[data-v-ceff2a60] {
   background: none;
 }

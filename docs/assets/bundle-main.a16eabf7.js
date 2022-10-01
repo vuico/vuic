@@ -1,5 +1,5 @@
 import { d as defineComponent, r as resolveComponent, o as openBlock, c as createBlock, w as withCtx, a as createBaseVNode, b as renderSlot, n as normalizeClass, e as withKeys, m as mergeProps, f as watch, s as scrollIntoView, g as onMounted, u as useCssVars, h as unref, i as computed, j as useRoute, k as ref, l as createElementBlock, p as createVNode, I as Icon, t as toDisplayString, q as createCommentVNode, v as createRouter, x as createWebHistory, y as createWebHashHistory, z as defineStore, A as useStorage, F as Fragment, B as renderList, C as onUnmounted, D as withModifiers, E as normalizeStyle, G as useEventListener, H as isRef, J as resolveDirective, K as withDirectives, L as useMediaQuery, T as Transition, M as createTextVNode, N as pushScopeId, O as popScopeId, P as defineAsyncComponent, Q as vShow, R as reactive, S as useTitle, U as createApp, V as createPinia, W as plugin } from './vendor.4da1c531.js';
-import { _ as __vitePreload, h as histoireConfig, i as isDark, c as customLogos, t as toggleDark, f as files, m as mapFile, a as tree, b as _sfc_main$e } from './GenericMountStory.73e5cd76.js';
+import { _ as __vitePreload, h as histoireConfig, i as isDark, c as customLogos, t as toggleDark, f as files, m as mapFile, a as tree, b as _sfc_main$e } from './GenericMountStory.b208a1ec.js';
 
 const style$1 = '';
 
@@ -169,12 +169,12 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import('./HomeView.6b05ba4e.js'),true?["assets/HomeView.6b05ba4e.js","assets/GenericMountStory.73e5cd76.js","assets/vendor.4da1c531.js"]:void 0)
+      component: () => __vitePreload(() => import('./HomeView.47ecf8bd.js'),true?["assets/HomeView.47ecf8bd.js","assets/GenericMountStory.b208a1ec.js","assets/vendor.4da1c531.js"]:void 0)
     },
     {
       path: "/story/:storyId",
       name: "story",
-      component: () => __vitePreload(() => import('./StoryView.83d8fb58.js'),true?["assets/StoryView.83d8fb58.js","assets/vendor.4da1c531.js","assets/BaseEmpty.592317be.js","assets/state.dd139394.js","assets/GenericMountStory.73e5cd76.js"]:void 0)
+      component: () => __vitePreload(() => import('./StoryView.880b1b04.js'),true?["assets/StoryView.880b1b04.js","assets/vendor.4da1c531.js","assets/BaseEmpty.0ce4d472.js","assets/state.fd26d051.js","assets/GenericMountStory.b208a1ec.js"]:void 0)
     }
   ]
 });
@@ -970,7 +970,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   },
   setup(__props, { emit }) {
     const SearchPane = defineAsyncComponent({
-      loader: () => __vitePreload(() => import('./SearchPane.8902d6ed.js'),true?["assets/SearchPane.8902d6ed.js","assets/GenericMountStory.73e5cd76.js","assets/vendor.4da1c531.js","assets/BaseEmpty.592317be.js"]:void 0),
+      loader: () => __vitePreload(() => import('./SearchPane.271f96a3.js'),true?["assets/SearchPane.271f96a3.js","assets/GenericMountStory.b208a1ec.js","assets/vendor.4da1c531.js","assets/BaseEmpty.0ce4d472.js"]:void 0),
       loadingComponent: _sfc_main$3,
       delay: 0
     });

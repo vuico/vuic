@@ -1,0 +1,14 @@
+@import "./normalize.css";
+
+* {
+  font-family: var(--theme-fontFamily-default);
+  font-weight: var(--theme-fontWeight-default);
+  font-size: var(--theme-fontSize-default);
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--theme-color-bg);
+  color: var(--theme-color-text);
+}

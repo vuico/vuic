@@ -9,14 +9,9 @@ const toggleTheme = () => {
 
 <template>
   <h1>Vuic</h1>
-  <Button @click="toggleTheme">Toggle Theme</Button>
-  <Button variant="primary" @click="toggleTheme">Toggle Theme</Button>
+  <Button>Button</Button>
+  <Button variant="primary">Button</Button>
+  <Button variant="primary" size="large" @click="toggleTheme">
+    Toggle Theme
+  </Button>
 </template>
-
-<script lang="ts">
-export default {
-  components: {
-    Button,
-  },
-};
-</script>

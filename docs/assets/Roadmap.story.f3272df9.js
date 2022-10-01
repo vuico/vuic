@@ -1,0 +1,5 @@
+const html = "<h1 id=\"roadmap\" tabindex=\"-1\">Roadmap <a class=\"header-anchor\" href=\"#roadmap\" aria-hidden=\"true\">#</a></h1>\n<h3 id=\"todo\" tabindex=\"-1\">TODO <a class=\"header-anchor\" href=\"#todo\" aria-hidden=\"true\">#</a></h3>\n<ul>\n<li>theme prop for Button (&quot;light&quot; | &quot;dark&quot;), by default use value from settings</li>\n<li>Histoire: Use VuicPlugin</li>\n<li>Option to register components globally</li>\n<li>Exported generic component types</li>\n<li>Margin, padding props for button (mb using mixines)</li>\n<li>License</li>\n<li>Icon component</li>\n<li>Fab component</li>\n<li>Tailwind</li>\n</ul>\n<h3 id=\"done\" tabindex=\"-1\">DONE <a class=\"header-anchor\" href=\"#done\" aria-hidden=\"true\">#</a></h3>\n<ul>\n<li>Plugin for Vue</li>\n<li>Theme config</li>\n<li>Better (more universal way) to apply defaultConfig</li>\n</ul>\n";
+const frontmatter = {"group":"more","title":"Roadmap","icon":"carbon:checkbox-checked"};
+const relativePath = "src/stories/more/Roadmap.story.md";
+
+export { frontmatter, html, relativePath };

@@ -6,7 +6,8 @@ icon: "carbon:color-palette"
 
 # Theme
 
-Theme is one core elements of Vuic. You can customize Vuic's theme as per your liking. Vuic theme is complex object which looks like:
+Theme is a part of [Vuic config](/vuic/#/story/src-stories-configuration-config-story-js).
+You can customize Vuic's theme as per your liking. Vuic theme is complex object which looks like:
 
 ```typescript
 const theme = {
@@ -23,11 +24,11 @@ const theme = {
 To set your custom theme you need to pass theme configuration to the VuicPlugin options like this:
 
 ```typescript
-// src/config/theme.ts
+// src/config/vuic-theme.ts
 
-import { Theme } from "@vuico/vuic";
+import { VuicTheme } from "@vuico/vuic";
 
-const theme: Theme = {
+const theme: VuicTheme = {
   fontSize: {
     default: 14,
   },
@@ -39,12 +40,38 @@ export default theme;
 ```typescript
 // src/main.ts
 
-import themeConfig from "@/config/theme.ts";
+import themeConfig from "@/config/vuic-theme.ts";
 
 app.use(VuicPlugin, {
   theme: themeConfig,
 });
 ```
+
+# Available options
+
+Full list of available theme props:
+
+### color
+
+| Prop           | Type      | Default value (Light)                                                                              | Default value (Dark)                                                                               |
+| -------------- | --------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| bg             | VuicColor | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/ffffff/ffffff.png)" /> "#ffffff" | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/1c1c1c/1c1c1c.png)" /> "#1c1c1c" |
+| card           | VuicColor | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/f3f3f3/f3f3f3.png)" /> "#f3f3f3" | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/2b2b2b/2b2b2b.png)" /> "#2b2b2b" |
+| border         | VuicColor | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/e2e2e2/e2e2e2.png)" /> "#e2e2e2" | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/444444/444444.png)" /> "#444444" |
+| primary        | VuicColor | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/007aff/007aff.png)" /> "#007aff" | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/0a84ff/0a84ff.png)" /> "#0a84ff" |
+| primaryHovered | VuicColor | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/1c1c1c/1c1c1c.png)" /> "#1c1c1c" | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/ffffff/ffffff.png)" /> "#ffffff" |
+| text           | VuicColor | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/1c1c1c/1c1c1c.png)" /> "#1c1c1c" | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/ffffff/ffffff.png)" /> "#ffffff" |
+| textHovered    | VuicColor | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/ffffff/ffffff.png)" /> "#ffffff" | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/1c1c1c/1c1c1c.png)" /> "#1c1c1c" |
+| textSecondary  | VuicColor | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/9a9a9a/9a9a9a.png)" /> "#9a9a9a" | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/9a9a9a/9a9a9a.png)" /> "#9a9a9a" |
+
+```typescript
+interface VuicColor {
+  light: string;
+  dark: string;
+}
+```
+
+---
 
 ### fontSize
 
@@ -80,29 +107,7 @@ app.use(VuicPlugin, {
 
 ---
 
-### color
-
-```typescript
-interface Color {
-  light: string;
-  dark: string;
-}
-```
-
-| Prop            | Type  | Default value (Light)                                                                              | Default value (Dark)                                                                               |
-| --------------- | ----- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| bg              | Color | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/ffffff/ffffff.png)" /> "#ffffff" | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/1c1c1c/1c1c1c.png)" /> "#1c1c1c" |
-| card            | Color | `{ light: "#f5f5f5", dark: "#2b2b2b" }`                                                            |                                                                                                    |
-| border          | Color | `{ light: "#e2e2e2", dark: "#444444" }`                                                            |                                                                                                    |
-| primary         | Color | `{ light: "#007aff", dark: "#0a84ff" }`                                                            |                                                                                                    |
-| primaryInverted | Color | "#ffffff"                                                                                          |                                                                                                    |
-| text            | Color | `{ light: "#1c1c1c", dark: "#ffffff" }`                                                            |                                                                                                    |
-| textInverted    | Color | "#1c1c1c"                                                                                          |                                                                                                    |
-| textSecondary   | Color | "#9a9a9a"                                                                                          |                                                                                                    |
-
----
-
-### palette
+### [WIP] palette
 
 For palette colors we are using [default colors by Apple](https://developer.apple.com/design/human-interface-guidelines/foundations/color/).
 

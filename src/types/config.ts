@@ -1,13 +1,13 @@
 // utils
-import { Settings } from "@/types/settings";
-import { Theme, defaultTheme } from "@/types/theme";
+import { ISettings } from "@/types/settings";
+import { ITheme, defaultTheme } from "@/types/theme";
 
-export interface Config {
-  theme?: Theme;
-  defaultSettings?: Settings;
+export interface IConfig {
+  theme?: ITheme;
+  defaultSettings?: ISettings;
 }
 
-export const defaultConfig: Config = {
+export const defaultConfig: IConfig = {
   theme: defaultTheme,
   defaultSettings: {
     theme: "light",

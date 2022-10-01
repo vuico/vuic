@@ -23,10 +23,10 @@ export default {
 <template>
   <button
     :class="{
-      button: true,
-      'button--primary': variant === 'primary',
-      'button--large': size === 'large',
-      'button--nobg': variant === 'nobg',
+      'vuic-button': true,
+      'vuic-button--primary': variant === 'primary',
+      'vuic-button--large': size === 'large',
+      'vuic-button--nobg': variant === 'nobg',
     }"
     @click="emit('click')"
   >

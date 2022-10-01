@@ -25,10 +25,14 @@ npm i @vuico/vuic
 ```typescript
 // src/main.ts
 
+import "/node_modules/@vuico/vuic/dist/style.css";
 import { VuicPlugin } from "@vuico/vuic";
 
+...
+
 app.use(VuicPlugin);
-app.mount("#app");
+
+...
 ```
 
 ---
@@ -54,12 +58,18 @@ yarn create vite
 yarn add @vuico/vuic
 ```
 
-4. Use Vuic plugin:
+4. Use Vuic plugin, your main.ts file should look like this:
 
 ```typescript
 // src/main.ts
 
+import { createApp } from "vue";
+import App from "./App.vue";
+
+import "/node_modules/@vuico/vuic/dist/style.css";
 import { VuicPlugin } from "@vuico/vuic";
+
+const app = createApp(App);
 
 app.use(VuicPlugin);
 app.mount("#app");

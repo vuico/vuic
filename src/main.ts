@@ -7,5 +7,9 @@ import { VuicPlugin } from ".";
 
 const app = createApp(App);
 
-app.use(VuicPlugin);
+app.use(VuicPlugin, {
+  defaultSettings: {
+    theme: "dark",
+  },
+});
 app.mount("#app");

@@ -38,10 +38,10 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
 function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("button", {
     class: normalizeClass({
-      button: true,
-      "button--primary": $props.variant === "primary",
-      "button--large": $props.size === "large",
-      "button--nobg": $props.variant === "nobg"
+      "vuic-button": true,
+      "vuic-button--primary": $props.variant === "primary",
+      "vuic-button--large": $props.size === "large",
+      "vuic-button--nobg": $props.variant === "nobg"
     }),
     onClick: _cache[0] || (_cache[0] = ($event) => $setup.emit("click"))
   }, [

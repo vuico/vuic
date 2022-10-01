@@ -1,6 +1,6 @@
 {
   "name": "@vuico/vuic",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Vuic - Vue UI Components library",
   "author": {
     "name": "Eugene Volynko",
@@ -12,25 +12,27 @@
     "url": "https://github.com/vuico/vuic"
   },
   "files": [
-    "dist"
+    "/dist"
   ],
-  "main": "./dist/vuic.es.js",
-  "module": "./dist/vuic.es.js",
+  "main": "./dist/vuic.es.ts",
+  "module": "./dist/vuic.es.ts",
   "exports": {
     ".": {
-      "import": "./dist/vuic.es.js",
-      "require": "./dist/vuic.es.js"
+      "import": "./dist/vuic.es.ts",
+      "require": "./dist/vuic.umd.ts"
     }
   },
+  "types": "./dist/types/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
     "preview": "vite preview",
     "docs:dev": "histoire dev",
     "docs:build": "histoire build",
     "docs:preview": "histoire preview"
   },
   "dependencies": {
+    "just-extend": "^6.1.1",
     "vue": "^3.2.37"
   },
   "peerDependencies": {

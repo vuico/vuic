@@ -1,8 +1,8 @@
 import { j as useRoute, i as computed, d as defineComponent, u as useCssVars, h as unref, a4 as toRefs, k as ref, o as openBlock, l as createElementBlock, p as createVNode, w as withCtx, I as Icon, n as normalizeClass, a as createBaseVNode, t as toDisplayString, a5 as useRouter, a6 as useResizeObserver, r as resolveComponent, c as createBlock, D as withModifiers, f as watch, E as normalizeStyle, F as Fragment, B as renderList, z as defineStore, A as useStorage, b as renderSlot, e as withKeys, J as resolveDirective, K as withDirectives, a7 as vModelText, M as createTextVNode, q as createCommentVNode, N as pushScopeId, O as popScopeId, C as onUnmounted, a8 as createStaticVNode, G as useEventListener, R as reactive, a3 as applyState, a9 as toRaw, m as mergeProps, aa as Dropdown, ab as clone, ac as omit, g as onMounted, ad as useTimeoutFn, ae as onClickOutside, H as isRef, af as nextTick, ag as HstTextarea, ah as HstCheckbox, ai as HstNumber, aj as HstText, a0 as resolveDynamicComponent, $ as watchEffect, _ as markRaw, ak as shallowRef, al as getHighlighter, am as unindent, an as HstCopyIcon, ao as setCDN, T as Transition, a2 as h, ap as onBeforeUnmount } from './vendor.4da1c531.js';
-import { _ as _export_sfc, u as useScrollOnActive, B as BaseListItemLink, a as useStoryStore, b as base, i as isMobile, c as BaseSplitPane, d as _sfc_main$w } from './bundle-main.08d9de32.js';
-import { B as BaseEmpty } from './BaseEmpty.592317be.js';
-import { _ as _sfc_main$v, a as SANDBOX_READY, E as EVENT_SEND, S as STATE_SYNC, t as toRawDeep, P as PREVIEW_SETTINGS_SYNC } from './state.dd139394.js';
-import { h as histoireConfig, _ as __vitePreload, d as clientSupportPlugins, i as isDark } from './GenericMountStory.73e5cd76.js';
+import { _ as _export_sfc, u as useScrollOnActive, B as BaseListItemLink, a as useStoryStore, b as base, i as isMobile, c as BaseSplitPane, d as _sfc_main$w } from './bundle-main.a16eabf7.js';
+import { B as BaseEmpty } from './BaseEmpty.0ce4d472.js';
+import { _ as _sfc_main$v, a as SANDBOX_READY, E as EVENT_SEND, S as STATE_SYNC, t as toRawDeep, P as PREVIEW_SETTINGS_SYNC } from './state.fd26d051.js';
+import { h as histoireConfig, _ as __vitePreload, d as clientSupportPlugins, i as isDark } from './GenericMountStory.b208a1ec.js';
 
 function useCurrentVariantRoute(variant) {
   const route = useRoute();
@@ -1651,7 +1651,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
   }
 });
 
-const markdownFiles = reactive({"src/stories/more/Roadmap.story.md": () => __vitePreload(() => import('./Roadmap.story.9a4bfa55.js'),true?[]:void 0),"src/stories/introduction/GettingStarted.story.md": () => __vitePreload(() => import('./GettingStarted.story.2b775d6c.js'),true?[]:void 0),"src/stories/configuration/Theme.story.md": () => __vitePreload(() => import('./Theme.story.affae324.js'),true?[]:void 0),"src/stories/introduction/Installation.story.md": () => __vitePreload(() => import('./Installation.story.c96d35a4.js'),true?[]:void 0),"src/stories/configuration/Config.story.md": () => __vitePreload(() => import('./Config.story.d972f4e0.js'),true?[]:void 0)});
+const markdownFiles = reactive({"src/stories/more/Roadmap.story.md": () => __vitePreload(() => import('./Roadmap.story.f3272df9.js'),true?[]:void 0),"src/stories/introduction/GettingStarted.story.md": () => __vitePreload(() => import('./GettingStarted.story.2b775d6c.js'),true?[]:void 0),"src/stories/introduction/Installation.story.md": () => __vitePreload(() => import('./Installation.story.5de30b68.js'),true?[]:void 0),"src/stories/configuration/Config.story.md": () => __vitePreload(() => import('./Config.story.99961e61.js'),true?[]:void 0),"src/stories/configuration/Settings.story.md": () => __vitePreload(() => import('./Settings.story.59c0716e.js'),true?[]:void 0),"src/stories/configuration/Theme.story.md": () => __vitePreload(() => import('./Theme.story.b35f6cd3.js'),true?[]:void 0)});
 
 const _hoisted_1$9 = /* @__PURE__ */ createTextVNode(" No documentation available ");
 const _hoisted_2$9 = ["innerHTML"];
