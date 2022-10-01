@@ -1,85 +1,56 @@
 // utils
 import { App, Plugin } from "vue";
-import { Settings, useSettingsStore } from "@/stores/settings";
+import { createStore } from "@/store";
+import { Config, defaultConfig } from "@/types/config";
+import { Settings, defaultSettings } from "@/types/settings";
+import { Theme, defaultTheme, Color } from "@/types/theme";
 
 // components
 import Button from "@/components/Button/Button.vue";
 
-export const components = {
+const store = createStore();
+
+export const state = store.state;
+export const setTheme = store.setTheme;
+
+export type { Config, Settings, Theme, Color };
+
+export {
+  defaultConfig,
+  defaultSettings,
+  defaultTheme,
+  //components
   Button,
 };
 
-export interface Color {
-  light: string;
-  dark: string;
-}
-
-export interface Theme {
-  colors: {
-    bg: Color;
-    card: Color;
-    border: Color;
-  };
-}
-
-export interface VuicConfig {
-  theme: Theme;
-  defaultSettings: Settings;
-}
-
-export const defaultConfig: VuicConfig = {
-  theme: {
-    colors: {
-      bg: { light: "#ffffff", dark: "#1c1c1c" },
-      card: { light: "red", dark: "#2b2b2b" },
-      border: { light: "blue", dark: "#444444" },
-    },
-  },
-  defaultSettings: {
-    theme: "light",
-  },
-};
-
-const createVuic = (config?: VuicConfig): VuicConfig => {
-  const newConfig: VuicConfig = {
+const createVuic = (config?: Config): Config => {
+  const newConfig: Config = {
     theme: {
-      colors: {
-        bg: (config && config.theme.colors.bg) || defaultConfig.theme.colors.bg,
-        card:
-          (config && config.theme.colors.card) ||
-          defaultConfig.theme.colors.card,
+      color: {
+        bg: config?.theme?.color?.bg || defaultConfig.theme?.color?.bg,
+        card: config?.theme?.color?.card || defaultConfig.theme?.color?.card,
         border:
-          (config && config.theme.colors.border) ||
-          defaultConfig.theme.colors.border,
+          config?.theme?.color?.border || defaultConfig.theme?.color?.border,
+        primary:
+          config?.theme?.color?.primary || defaultConfig.theme?.color?.primary,
+        //
+        text: config?.theme?.color?.text || defaultConfig.theme?.color?.text,
       },
     },
     defaultSettings: {
       theme:
-        (config && config.defaultSettings.theme) ||
-        defaultConfig.defaultSettings.theme,
+        config?.defaultSettings?.theme || defaultConfig.defaultSettings?.theme,
     },
   };
 
-  setTheme(newConfig.defaultSettings.theme);
+  store.setTheme(newConfig.defaultSettings?.theme || "light");
 
   return newConfig;
 };
 
-export const setTheme = (theme: "light" | "dark") => {
-  const settings = useSettingsStore();
-
-  settings.setTheme(theme);
-};
-
-export const getTheme = () => {
-  const settings = useSettingsStore();
-
-  return settings.settings.theme;
-};
-
 // The Install function used by Vue to register the plugin
 export const VuicPlugin: Plugin = {
-  install(app: App, config?: VuicConfig) {
+  install(app: App, config?: Config) {
     app.config.globalProperties.$vuic = createVuic(config);
   },
 };

@@ -10,17 +10,12 @@ Theme is one core elements of Vuic. You can customize Vuic's theme as per your l
 
 ```typescript
 const theme = {
-  colors: {
-    dark: {
-      bg: "#1c1c1c",
-      primary: "#0484ff",
-    },
+  color: {
+    bg: { light: "#ffffff", dark: "#1c1c1c" },
+    primary: { light: "#007aff", dark: "#0a84ff" },
   },
-  fontSizes: {
+  fontSize: {
     default: 14,
-  },
-  palette: {
-    dark: {},
   },
 };
 ```
@@ -33,7 +28,7 @@ To set your custom theme you need to pass theme configuration to the VuicPlugin 
 import { Theme } from "@vuico/vuic";
 
 const theme: Theme = {
-  fontSizes: {
+  fontSize: {
     default: 14,
   },
 };
@@ -85,36 +80,43 @@ app.use(VuicPlugin, {
 
 ---
 
-### colors.light / colors.dark
+### color
 
-| Prop            | Type   | Default value (dark) |
-| --------------- | ------ | -------------------- |
-| bg              | string | "#1c1c1c"            |
-| card            | string | "#2b2b2b"            |
-| border          | string | "#444444"            |
-| primary         | string | "#0484ff"            |
-| primaryInverted | string | "#ffffff"            |
-| text            | string | "#ffffff"            |
-| textInverted    | string | "#1c1c1c"            |
-| textSecondary   | string | "#9a9a9a"            |
+```typescript
+interface Color {
+  light: string;
+  dark: string;
+}
+```
+
+| Prop            | Type  | Default value (Light)                                                                              | Default value (Dark)                                                                               |
+| --------------- | ----- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| bg              | Color | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/ffffff/ffffff.png)" /> "#ffffff" | <img style="margin: -3px 3px" src="https://via.placeholder.com/15/1c1c1c/1c1c1c.png)" /> "#1c1c1c" |
+| card            | Color | `{ light: "#f5f5f5", dark: "#2b2b2b" }`                                                            |                                                                                                    |
+| border          | Color | `{ light: "#e2e2e2", dark: "#444444" }`                                                            |                                                                                                    |
+| primary         | Color | `{ light: "#007aff", dark: "#0a84ff" }`                                                            |                                                                                                    |
+| primaryInverted | Color | "#ffffff"                                                                                          |                                                                                                    |
+| text            | Color | `{ light: "#1c1c1c", dark: "#ffffff" }`                                                            |                                                                                                    |
+| textInverted    | Color | "#1c1c1c"                                                                                          |                                                                                                    |
+| textSecondary   | Color | "#9a9a9a"                                                                                          |                                                                                                    |
 
 ---
 
-### palette.light / palette.dark
+### palette
 
 For palette colors we are using [default colors by Apple](https://developer.apple.com/design/human-interface-guidelines/foundations/color/).
 
-| Prop   | Type   | Default value (dark) |
-| ------ | ------ | -------------------- |
-| red    | string |                      |
-| orange | string |                      |
-| yellow | string |                      |
-| green  | string |                      |
-| mint   | string |                      |
-| teal   | string |                      |
-| cyan   | string |                      |
-| blue   | string |                      |
-| indigo | string |                      |
-| purple | string |                      |
-| pink   | string |                      |
-| brown  | string |                      |
+| Prop   | Type   | Default value |
+| ------ | ------ | ------------- |
+| red    | string |               |
+| orange | string |               |
+| yellow | string |               |
+| green  | string |               |
+| mint   | string |               |
+| teal   | string |               |
+| cyan   | string |               |
+| blue   | string |               |
+| indigo | string |               |
+| purple | string |               |
+| pink   | string |               |
+| brown  | string |               |

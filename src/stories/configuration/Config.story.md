@@ -11,10 +11,11 @@ To set custom options for the Vuic you need to pass VuicConfig as second argumen
 ```typescript
 // src/main.ts
 
-import { VuicPlugin, VuicConfig } from "@vuico/vuic";
+import { VuicPlugin, Config } from "@vuico/vuic";
 
-const config: VuicConfig = {
+const config: Config = {
   theme: {...},
+  defaultSettings: {...},
 };
 
 app.use(VuicPlugin, config);

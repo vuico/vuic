@@ -1,10 +1,9 @@
-import { b as useRoute, c as computed, d as defineComponent, u as useCssVars, a as unref, a8 as toRefs, r as ref, o as openBlock, e as createElementBlock, f as createVNode, w as withCtx, I as Icon, n as normalizeClass, g as createBaseVNode, t as toDisplayString, a9 as useRouter, aa as useResizeObserver, l as resolveComponent, q as createBlock, a0 as withModifiers, k as watch, G as normalizeStyle, F as Fragment, p as renderList, i as defineStore, j as useStorage, Y as renderSlot, m as withKeys, x as resolveDirective, y as withDirectives, ab as vModelText, z as createTextVNode, h as createCommentVNode, A as pushScopeId, B as popScopeId, $ as onUnmounted, ac as createStaticVNode, s as useEventListener, a6 as SANDBOX_READY, ad as EVENT_SEND, a3 as STATE_SYNC, a7 as applyState, a4 as PREVIEW_SETTINGS_SYNC, ae as toRaw, W as mergeProps, af as Dropdown, ag as clone, ah as omit, J as onMounted, ai as useTimeoutFn, aj as onClickOutside, v as isRef, ak as nextTick, al as HstTextarea, am as HstCheckbox, an as HstNumber, ao as HstText, X as resolveDynamicComponent, E as reactive, _ as __vitePreload, V as watchEffect, U as markRaw, ap as shallowRef, aq as getHighlighter, ar as unindent, as as HstCopyIcon, at as setCDN, T as Transition, a5 as h, au as onBeforeUnmount } from "./vendor.b38c95bb.js";
-import { u as useStoryStore, b as base } from "./story.a139f265.js";
-import { _ as _export_sfc, u as useScrollOnActive, B as BaseListItemLink, i as isMobile, b as BaseSplitPane, a as _sfc_main$w } from "./MobileOverlay.22f68c43.js";
-import { B as BaseEmpty } from "./BaseEmpty.bc20a35c.js";
-import { _ as _sfc_main$v, t as toRawDeep } from "./state.1c49f152.js";
-import { h as histoireConfig, b as clientSupportPlugins, i as isDark } from "./GenericMountStory.bd778a51.js";
-import { useEventsStore } from "./events.9c0777d3.js";
+import { j as useRoute, i as computed, d as defineComponent, u as useCssVars, h as unref, a4 as toRefs, k as ref, o as openBlock, l as createElementBlock, p as createVNode, w as withCtx, I as Icon, n as normalizeClass, a as createBaseVNode, t as toDisplayString, a5 as useRouter, a6 as useResizeObserver, r as resolveComponent, c as createBlock, D as withModifiers, f as watch, E as normalizeStyle, F as Fragment, B as renderList, z as defineStore, A as useStorage, b as renderSlot, e as withKeys, J as resolveDirective, K as withDirectives, a7 as vModelText, M as createTextVNode, q as createCommentVNode, N as pushScopeId, O as popScopeId, C as onUnmounted, a8 as createStaticVNode, G as useEventListener, R as reactive, a3 as applyState, a9 as toRaw, m as mergeProps, aa as Dropdown, ab as clone, ac as omit, g as onMounted, ad as useTimeoutFn, ae as onClickOutside, H as isRef, af as nextTick, ag as HstTextarea, ah as HstCheckbox, ai as HstNumber, aj as HstText, a0 as resolveDynamicComponent, $ as watchEffect, _ as markRaw, ak as shallowRef, al as getHighlighter, am as unindent, an as HstCopyIcon, ao as setCDN, T as Transition, a2 as h, ap as onBeforeUnmount } from './vendor.4da1c531.js';
+import { _ as _export_sfc, u as useScrollOnActive, B as BaseListItemLink, a as useStoryStore, b as base, i as isMobile, c as BaseSplitPane, d as _sfc_main$w } from './bundle-main.08d9de32.js';
+import { B as BaseEmpty } from './BaseEmpty.592317be.js';
+import { _ as _sfc_main$v, a as SANDBOX_READY, E as EVENT_SEND, S as STATE_SYNC, t as toRawDeep, P as PREVIEW_SETTINGS_SYNC } from './state.dd139394.js';
+import { h as histoireConfig, _ as __vitePreload, d as clientSupportPlugins, i as isDark } from './GenericMountStory.73e5cd76.js';
+
 function useCurrentVariantRoute(variant) {
   const route = useRoute();
   const isActive = computed(() => route.query.variantId === variant.value.id);
@@ -20,6 +19,7 @@ function useCurrentVariantRoute(variant) {
     targetRoute
   };
 }
+
 const _hoisted_1$r = { class: "htw-truncate" };
 const _sfc_main$u = /* @__PURE__ */ defineComponent({
   __name: "StoryVariantListItem",
@@ -69,6 +69,7 @@ const _sfc_main$u = /* @__PURE__ */ defineComponent({
   }
 });
 var StoryVariantListItem = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["__scopeId", "data-v-7f8cccbc"]]);
+
 const _hoisted_1$q = { class: "htw-flex-none htw-flex htw-items-center" };
 const _sfc_main$t = /* @__PURE__ */ defineComponent({
   __name: "StoryVariantGridItem",
@@ -166,6 +167,7 @@ const _sfc_main$t = /* @__PURE__ */ defineComponent({
   }
 });
 var StoryVariantGridItem = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["__scopeId", "data-v-2db4d3d2"]]);
+
 const _sfc_main$s = /* @__PURE__ */ defineComponent({
   __name: "StoryVariantGrid",
   setup(__props) {
@@ -213,10 +215,10 @@ const _sfc_main$s = /* @__PURE__ */ defineComponent({
         }
       }
     }
-    function onItemResize(w, h2) {
+    function onItemResize(w, h) {
       itemWidth.value = w;
-      if (maxItemHeight.value < h2) {
-        maxItemHeight.value = h2;
+      if (maxItemHeight.value < h) {
+        maxItemHeight.value = h;
         updateMaxCount();
       }
     }
@@ -255,6 +257,7 @@ const _sfc_main$s = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _hoisted_1$p = { class: "htw-flex htw-items-center htw-gap-1 htw-text-gray-500 htw-flex-1 htw-truncate htw-min-w-0" };
 const _sfc_main$r = /* @__PURE__ */ defineComponent({
   __name: "StoryVariantTitle",
@@ -276,6 +279,7 @@ const _sfc_main$r = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const usePreviewSettingsStore = defineStore("preview-settings", () => {
   const currentSettings = useStorage("_histoire-sandbox-settings-v2", {
     responsiveWidth: 720,
@@ -288,6 +292,7 @@ const usePreviewSettingsStore = defineStore("preview-settings", () => {
     currentSettings
   };
 });
+
 const _hoisted_1$o = { class: "htw-text-white htw-w-[16px] htw-h-[16px] htw-relative" };
 const _hoisted_2$k = {
   width: "16",
@@ -361,6 +366,7 @@ const _sfc_main$q = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _hoisted_1$n = { class: "htw-flex htw-flex-col htw-items-stretch" };
 const _hoisted_2$j = /* @__PURE__ */ createTextVNode(" Rotate ");
 const _hoisted_3$c = { class: "htw-flex htw-gap-2 htw-px-4 htw-py-3" };
@@ -484,6 +490,7 @@ const _sfc_main$p = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _withScopeId$2 = (n) => (pushScopeId("data-v-bc4883a4"), n = n(), popScopeId(), n);
 const _hoisted_1$m = { class: "htw-cursor-pointer hover:htw-text-primary-500 htw-flex htw-items-center htw-gap-1 htw-h-full htw-px-2 htw-group" };
 const _hoisted_2$i = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createBaseVNode("div", { class: "bind-preview-bg htw-w-4 htw-h-4 htw-rounded-full htw-border htw-border-black/50 dark:htw-border-white/50" }, null, -1));
@@ -561,12 +568,14 @@ const _sfc_main$o = /* @__PURE__ */ defineComponent({
   }
 });
 var StoryVariantBackground = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["__scopeId", "data-v-bc4883a4"]]);
+
 function getSandboxUrl(story, variant) {
   const url = new URLSearchParams();
   url.append("storyId", story.id);
   url.append("variantId", variant.id);
   return `${base}__sandbox.html?${url.toString()}`;
 }
+
 const _hoisted_1$l = ["href"];
 const _sfc_main$n = /* @__PURE__ */ defineComponent({
   __name: "StoryVariantNewTab",
@@ -596,12 +605,14 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _sfc_main$m = {};
 const _hoisted_1$k = { class: "__histoire-hatched-pattern" };
 function _sfc_render$3(_ctx, _cache) {
   return openBlock(), createElementBlock("div", _hoisted_1$k);
 }
 var HatchedPattern = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$3], ["__scopeId", "data-v-0bb8c4e8"]]);
+
 const _sfc_main$l = {};
 const _hoisted_1$j = { fill: "none" };
 const _hoisted_2$h = /* @__PURE__ */ createBaseVNode("pattern", {
@@ -640,6 +651,7 @@ function _sfc_render$2(_ctx, _cache) {
   return openBlock(), createElementBlock("svg", _hoisted_1$j, _hoisted_4$7);
 }
 var CheckerboardPattern = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$2]]);
+
 const _withScopeId$1 = (n) => (pushScopeId("data-v-4514e446"), n = n(), popScopeId(), n);
 const _hoisted_1$i = { class: "htw-w-full htw-h-full htw-flex-1 htw-border htw-border-gray-100 dark:htw-border-gray-800 htw-rounded-lg htw-relative htw-overflow-hidden" };
 const _hoisted_2$g = {
@@ -812,6 +824,7 @@ const _sfc_main$k = /* @__PURE__ */ defineComponent({
   }
 });
 var StoryResponsivePreview = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["__scopeId", "data-v-4514e446"]]);
+
 const _sfc_main$j = /* @__PURE__ */ defineComponent({
   __name: "StoryVariantSinglePreviewNative",
   props: {
@@ -853,6 +866,33 @@ const _sfc_main$j = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
+const useEventsStore = defineStore("events", () => {
+  const storyStore = useStoryStore();
+  const events = reactive([]);
+  const unseen = ref(0);
+  function addEvent(event) {
+    events.push(event);
+    unseen.value++;
+  }
+  function reset() {
+    events.length = 0;
+    unseen.value = 0;
+  }
+  watch(() => {
+    var _a;
+    return (_a = storyStore.currentVariant) == null ? void 0 : _a.id;
+  }, () => {
+    reset();
+  });
+  return {
+    addEvent,
+    reset,
+    events,
+    unseen
+  };
+});
+
 const _hoisted_1$h = ["src"];
 const _sfc_main$i = /* @__PURE__ */ defineComponent({
   __name: "StoryVariantSinglePreviewRemote",
@@ -965,6 +1005,7 @@ const _sfc_main$i = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _hoisted_1$g = {
   class: "htw-h-full htw-flex htw-flex-col",
   "data-test-id": "story-variant-single-view"
@@ -1005,6 +1046,7 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _hoisted_1$f = {
   key: 0,
   class: "htw-p-2 htw-h-full"
@@ -1109,6 +1151,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
   }
 });
 var StoryVariantSingle = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["__scopeId", "data-v-2ca2325e"]]);
+
 const _hoisted_1$e = { class: "htw-bg-gray-50 htw-h-full dark:htw-bg-gray-750" };
 const _sfc_main$f = /* @__PURE__ */ defineComponent({
   __name: "StoryViewer",
@@ -1156,6 +1199,7 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
   }
 });
 var StoryViewer = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["__scopeId", "data-v-b9d4a640"]]);
+
 const _hoisted_1$d = { class: "htw-cursor-pointer htw-w-full htw-outline-none htw-px-2 htw-h-[27px] -htw-my-1 htw-border htw-border-solid htw-border-black/25 dark:htw-border-white/25 hover:htw-border-primary-500 dark:hover:htw-border-primary-500 htw-rounded-sm htw-flex htw-gap-2 htw-items-center htw-leading-normal" };
 const _hoisted_2$d = { class: "htw-flex-1 htw-truncate" };
 const _hoisted_3$7 = { class: "htw-flex htw-flex-col htw-bg-gray-50 dark:htw-bg-gray-700" };
@@ -1221,6 +1265,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _hoisted_1$c = { class: "htw-flex htw-gap-2 htw-w-full htw-items-center" };
 const _hoisted_2$c = ["onUpdate:modelValue"];
 const _hoisted_3$6 = {
@@ -1404,6 +1449,7 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _sfc_main$c = /* @__PURE__ */ defineComponent({
   __name: "ControlsComponentPropItem",
   props: {
@@ -1498,6 +1544,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _hoisted_1$b = { class: "htw-font-mono htw-p-2 htw-flex htw-items-center htw-gap-1" };
 const _hoisted_2$b = /* @__PURE__ */ createBaseVNode("span", { class: "htw-opacity-30" }, "<", -1);
 const _hoisted_3$5 = /* @__PURE__ */ createBaseVNode("span", { class: "htw-opacity-30" }, ">", -1);
@@ -1536,6 +1583,7 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _hoisted_1$a = {
   "data-test-id": "story-controls",
   class: "htw-flex htw-flex-col htw-divide-y htw-divide-gray-100 dark:htw-divide-gray-750"
@@ -1602,7 +1650,9 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const markdownFiles = reactive({ "src/stories/getting-started.story.md": () => __vitePreload(() => import("./getting-started.story.afba4dd7.js"), true ? [] : void 0) });
+
+const markdownFiles = reactive({"src/stories/more/Roadmap.story.md": () => __vitePreload(() => import('./Roadmap.story.9a4bfa55.js'),true?[]:void 0),"src/stories/introduction/GettingStarted.story.md": () => __vitePreload(() => import('./GettingStarted.story.2b775d6c.js'),true?[]:void 0),"src/stories/configuration/Theme.story.md": () => __vitePreload(() => import('./Theme.story.affae324.js'),true?[]:void 0),"src/stories/introduction/Installation.story.md": () => __vitePreload(() => import('./Installation.story.c96d35a4.js'),true?[]:void 0),"src/stories/configuration/Config.story.md": () => __vitePreload(() => import('./Config.story.d972f4e0.js'),true?[]:void 0)});
+
 const _hoisted_1$9 = /* @__PURE__ */ createTextVNode(" No documentation available ");
 const _hoisted_2$9 = ["innerHTML"];
 function useStoryDoc(story) {
@@ -1670,6 +1720,7 @@ const _sfc_main$9 = defineComponent({
     };
   }
 });
+
 const _hoisted_1$8 = {
   key: 0,
   class: "htw-text-xs htw-opacity-50 htw-truncate"
@@ -1724,6 +1775,7 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _hoisted_1$7 = /* @__PURE__ */ createTextVNode(" No event fired ");
 const _hoisted_2$7 = { key: 1 };
 const _sfc_main$7 = /* @__PURE__ */ defineComponent({
@@ -1767,6 +1819,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _withScopeId = (n) => (pushScopeId("data-v-68151bff"), n = n(), popScopeId(), n);
 const _hoisted_1$6 = { class: "htw-bg-gray-100 dark:htw-bg-gray-800 htw-h-full htw-overflow-hidden htw-flex htw-flex-col" };
 const _hoisted_2$6 = {
@@ -1887,6 +1940,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   }
 });
 var StorySourceCode = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-68151bff"]]);
+
 const _sfc_main$5 = defineComponent({
   inheritAttrs: false,
   props: {
@@ -1929,6 +1983,7 @@ function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
   }, 16);
 }
 var BaseTab = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$1]]);
+
 const _hoisted_1$4 = {
   role: "button",
   class: "htw-cursor-pointer hover:htw-bg-primary-50 dark:hover:htw-bg-primary-900 htw-w-8 htw-h-full htw-flex htw-items-center htw-justify-center htw-absolute htw-top-0 htw-right-0"
@@ -2022,6 +2077,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _sfc_main$3 = defineComponent({
   inheritAttrs: false,
   props: {
@@ -2064,6 +2120,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   }, 16);
 }
 var BaseOverflowTab = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render]]);
+
 const _hoisted_1$2 = /* @__PURE__ */ createTextVNode(" Controls ");
 const _hoisted_2$2 = /* @__PURE__ */ createTextVNode(" Docs ");
 const _hoisted_3$1 = /* @__PURE__ */ createTextVNode(" Events ");
@@ -2169,6 +2226,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _hoisted_1$1 = /* @__PURE__ */ createBaseVNode("span", null, "Select a variant", -1);
 const _hoisted_2$1 = /* @__PURE__ */ createBaseVNode("span", null, "Loading...", -1);
 const _hoisted_3 = { class: "htw-flex htw-flex-col htw-h-full" };
@@ -2230,6 +2288,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     };
   }
 });
+
 const _hoisted_1 = {
   key: 1,
   class: "htw-h-full"
@@ -2309,6 +2368,5 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
-export {
-  _sfc_main as default
-};
+
+export { _sfc_main as default };

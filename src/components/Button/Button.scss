@@ -1,10 +1,10 @@
 // color
-$color_bg: var(--theme-colors-bg);
-$color_card: var(--theme-colors-card);
-$color_border: #444444;
-$color_primary: #0484ff;
+$color_bg: var(--theme-color-bg);
+$color_card: var(--theme-color-card);
+$color_border: var(--theme-color-border);
+$color_primary: var(--theme-color-primary);
 $color_primary_inverted: #ffffff;
-$color_text: #ffffff;
+$color_text: var(--theme-color-text);
 $color_text_inverted: #1c1c1c;
 $color_text_secondary: #9a9a9a;
 
@@ -49,6 +49,7 @@ $outline_offset: -2px;
 
   &--primary {
     background-color: $color_primary;
+    color: #ffffff;
 
     &:hover {
       background-color: $color_primary_inverted;

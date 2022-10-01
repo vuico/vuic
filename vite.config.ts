@@ -8,6 +8,7 @@ import Checker from "vite-plugin-checker";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  plugins: [Vue(), Checker({ typescript: true })],
   base: "/vuic/",
   resolve: {
     alias: {
@@ -15,6 +16,7 @@ export default defineConfig({
     },
   },
   build: {
+    target: "esnext",
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
       name: "Vuic",
@@ -31,5 +33,4 @@ export default defineConfig({
       },
     },
   },
-  plugins: [Vue(), Checker({ typescript: true })],
 });

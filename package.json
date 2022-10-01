@@ -1,6 +1,6 @@
 {
   "name": "@vuico/vuic",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Vuic - Vue UI Components library",
   "author": {
     "name": "Eugene Volynko",
@@ -14,12 +14,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/vuic.umd.js",
+  "main": "./dist/vuic.es.js",
   "module": "./dist/vuic.es.js",
   "exports": {
     ".": {
       "import": "./dist/vuic.es.js",
-      "require": "./dist/vuic.umd.js"
+      "require": "./dist/vuic.es.js"
     }
   },
   "scripts": {
@@ -31,7 +31,9 @@
     "docs:preview": "histoire preview"
   },
   "dependencies": {
-    "pinia": "^2.0.22",
+    "vue": "^3.2.37"
+  },
+  "peerDependencies": {
     "vue": "^3.2.37"
   },
   "devDependencies": {
