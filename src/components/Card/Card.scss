@@ -1,0 +1,9 @@
+.vuic-card {
+  border-radius: 24px;
+  background: var(--theme-color-card);
+
+  &--nobg {
+    border-radius: 0;
+    background: none;
+  }
+}

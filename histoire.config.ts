@@ -25,6 +25,10 @@ export default defineConfig({
         title: "Components",
       },
       {
+        id: "mixins",
+        title: "Mixins",
+      },
+      {
         id: "more",
         title: "More",
       },

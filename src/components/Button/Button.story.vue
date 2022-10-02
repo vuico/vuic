@@ -31,10 +31,18 @@ import { Button } from "@vuico/vuic";
 
 ### Props
 
-| Prop    | Type                             | Default value |
-| ------- | -------------------------------- | ------------- |
-| variant | "default" or "primary" or "nobg" | "default"     |
-| size    | "default" or "large"             | "default"     |
+| Prop    | Type                             | Required | Default value | Description        |
+| ------- | -------------------------------- | -------- | ------------- | ------------------ |
+| variant | "default" or "primary" or "nobg" | -        | "default"     | Look of the button |
+| size    | "default" or "large"             | -        | "default"     | Size of the button |
 
-- Margin Props
+### Events
+
+| Event  | Type       | Required | Description           |
+| ------ | ---------- | -------- | --------------------- |
+| @click | () => void | -        | Fires on button click |
+
+### Implements
+
+- [Margin mixin](/vuic/#/story/src-stories-mixins-margin-story-js)
 </docs>
