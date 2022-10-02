@@ -24,7 +24,7 @@ export default defaultSettings;
 ```typescript
 // src/main.ts
 
-import defaultSettings from "@/config/vuic-settings.ts";
+import defaultSettings from "@/config/vuic-settings";
 
 app.use(VuicPlugin, {
   defaultSettings,

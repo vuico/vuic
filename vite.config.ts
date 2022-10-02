@@ -8,8 +8,15 @@ import Checker from "vite-plugin-checker";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [Vue(), Checker({ typescript: true })],
   base: "/vuic/",
+  plugins: [Vue(), Checker({ typescript: true })],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/assets/styles/variables.scss";`,
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

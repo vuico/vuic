@@ -9,8 +9,8 @@ const toggleTheme = () => {
 
 <template>
   <h1>Vuic</h1>
-  <Button>Button</Button>
-  <Button variant="primary">Button</Button>
+  <Button :mb="16">Button</Button>
+  <Button variant="primary" :mb="16">Button</Button>
   <Button variant="primary" size="large" @click="toggleTheme">
     Toggle Theme
   </Button>

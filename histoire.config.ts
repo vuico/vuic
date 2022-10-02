@@ -31,4 +31,5 @@ export default defineConfig({
     ],
   },
   routerMode: "hash",
+  setupFile: "/src/histoire.setup.ts",
 });

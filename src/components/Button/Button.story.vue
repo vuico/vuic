@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import Button from "./Button.vue";
-import { hstEvent } from "histoire/client";
 </script>
 
 <template>
@@ -24,5 +23,18 @@ import { hstEvent } from "histoire/client";
 <docs lang="md">
 # Button
 
-Checkout this [cool video](https://www.youtube.com/watch?v=dQw4w9WgXcQ)!
+### Import
+
+```typescript
+import { Button } from "@vuico/vuic";
+```
+
+### Props
+
+| Prop    | Type                             | Default value |
+| ------- | -------------------------------- | ------------- |
+| variant | "default" or "primary" or "nobg" | "default"     |
+| size    | "default" or "large"             | "default"     |
+
+- Margin Props
 </docs>

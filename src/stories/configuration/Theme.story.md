@@ -40,7 +40,7 @@ export default theme;
 ```typescript
 // src/main.ts
 
-import themeConfig from "@/config/vuic-theme.ts";
+import themeConfig from "@/config/vuic-theme";
 
 app.use(VuicPlugin, {
   theme: themeConfig,
@@ -109,19 +109,26 @@ interface VuicColor {
 
 ### [WIP] palette
 
-For palette colors we are using [default colors by Apple](https://developer.apple.com/design/human-interface-guidelines/foundations/color/).
+For palette colors we are using [color scheme by Apple](https://developer.apple.com/design/human-interface-guidelines/foundations/color/).
 
-| Prop   | Type   | Default value |
-| ------ | ------ | ------------- |
-| red    | string |               |
-| orange | string |               |
-| yellow | string |               |
-| green  | string |               |
-| mint   | string |               |
-| teal   | string |               |
-| cyan   | string |               |
-| blue   | string |               |
-| indigo | string |               |
-| purple | string |               |
-| pink   | string |               |
-| brown  | string |               |
+| Prop   | Type      | Default value (Light) | Default value (Dark) |
+| ------ | --------- | --------------------- | -------------------- |
+| red    | VuicColor |                       |                      |
+| orange | VuicColor |                       |                      |
+| yellow | VuicColor |                       |                      |
+| green  | VuicColor |                       |                      |
+| mint   | VuicColor |                       |                      |
+| teal   | VuicColor |                       |                      |
+| cyan   | VuicColor |                       |                      |
+| blue   | VuicColor |                       |                      |
+| indigo | VuicColor |                       |                      |
+| purple | VuicColor |                       |                      |
+| pink   | VuicColor |                       |                      |
+| brown  | VuicColor |                       |                      |
+
+```typescript
+interface VuicColor {
+  light: string;
+  dark: string;
+}
+```

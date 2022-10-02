@@ -74,3 +74,33 @@ const app = createApp(App);
 app.use(VuicPlugin);
 app.mount("#app");
 ```
+
+---
+
+### Recomendations for Vue 3 and Vite projects
+
+- Add paths to your tsconfig.json:
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
+```
+
+- Add alias to your vite.config.ts:
+
+```typescript
+import path from "path";
+
+export default defineConfig({
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+});
+```
